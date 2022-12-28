@@ -1,0 +1,41 @@
+.layout {
+  position: relative;
+  height: 100vh;
+  padding-top: 50px;
+
+  .main {
+    margin-left: 60px;
+  }
+}
+
+:global {
+  .ant-input-search {
+    position: relative;
+
+    .ant-input {
+      height: 32px;
+      padding-right: 40px;
+      line-height: 32px;
+    }
+
+    .ant-input-group {
+      .ant-input-group-addon:last-child {
+        background: transparent;
+      }
+    }
+
+    .ant-btn {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      z-index: 1;
+      height: 30px;
+      border: none;
+
+      &::after {
+        display: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
