@@ -1,33 +1,24 @@
 {
-  "name": "name",
-  "version": "1.0.0",
   "private": true,
   "author": "高艳兵 <gaoyanbing@yong9ai.com>",
   "scripts": {
     "build": "max build",
-    "build:pre": "cross-env APP_ENV=pre max build",
-    "build:prod": "cross-env APP_ENV=prod max build",
-    "build:test": "cross-env APP_ENV=test max build",
-    "dev": "cross-env MOCK=none PORT=8000 max dev",
-    "docker": "node ./tool",
+    "dev": "max dev",
     "format": "prettier --cache --write .",
     "postinstall": "max setup",
     "prepare": "husky install",
     "setup": "max setup",
-    "start": "cross-env PORT=8000 max dev"
+    "start": "npm run dev"
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@ant-design/pro-components": "^2.0.1",
-    "@umijs/max": "^4.0.22",
-    "ahooks": "^3.7.2",
-    "antd": "^4.20.7",
-    "cross-env": "^7.0.3"
+    "@umijs/max": "^4.0.40",
+    "antd": "^5.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "fs": "^0.0.1-security",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
